@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LactoMax</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+   
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/LactoMax.png" alt="Company Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About us</a></li>
+             <li><a href="#">Our Team</a></li>
+
+            <li><a href="#collaboration">Our Parteners</a></li>
+            <li><a href="#products">Our products</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#contact-us">Contact</a></li>
+        </ul>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+        <button class="get-involved">Get Involved</button>
+
+        <!-- Sidebar Menu Icon -->
+        <div class="menu-icon" id="menu-icon">
+            <span>&#9776;</span>
+        </div>
+    </nav>
+    <style>
+        
+    </style>
+
+    <!-- Sidebar for small screens -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+
+            <li><a href="#">Our Partenership</a></li>
+            <li><a href="#product">Products</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+const sidebar = document.getElementById('sidebar');
+
+// Toggle sidebar visibility on small screens
+menuIcon.addEventListener('click', () => {
+    if (sidebar.style.left === '-250px') {
+        sidebar.style.left = '0';
+    } else {
+        sidebar.style.left = '-250px';
+    }
+});
+
+    </script>
+    <!-- start of home -->
+    <!-- <section id="home">
+        
+    <div class="home-container">
+        <div class="image-box" id="image1">
+            <div class="content">
+                <h2>Image 1</h2>
+                <p>This is the content for image 1. It represents our first feature or service.</p>
+            </div>
+            <img src="images/home1.jpg" alt="Image 1">
+        </div>
+
+        <div class="image-box" id="image2">
+            <div class="content">
+                <h2>Image 2</h2>
+                <p>This is the content for image 2. It represents our second feature or service.</p>
+            </div>
+            <img src="images/home2.jpg" alt="Image 2">
+        </div>
+
+        <div class="image-box" id="image3">
+            <div class="content">
+                <h2>Image 3</h2>
+                <p>This is the content for image 3. It represents our third feature or service.</p>
+            </div>
+            <img src="images/home3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    </section> -->
+
+    <div class="team-container">
+        <h1>Welcome to LactoMax</h1>
+        <div class="slider">
+            <div class="team-member">
+                <img src="images/ani.jpg" alt="Family Member 1" class="profilepic">
+                <div class="description">
+                    <h2>Cow grazing</h2>
+                    <p>Description: Healthy cows enjoying green pastures.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/home3.jpg" alt="Family Member 2" class="profilepic">
+                <div class="description">
+                    <h2>Members</h2>
+                    <p>Description: Core members and leaders of LactoMax.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/home2.jpg" alt="Family Member 3" class="profilepic">
+                <div class="description">
+                    <h2>Field</h2>
+                    <p>Description: Mercy our company researcher at the field.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+          let currentIndex = 0;
+const teamMembers = document.querySelectorAll('.team-member');
+
+function showNextMember() {
+    // Hide the current member
+    teamMembers[currentIndex].classList.remove('active');
+    
+    // Move to the next member
+    currentIndex = (currentIndex + 1) % teamMembers.length;
+    
+    // Show the next member
+    teamMembers[currentIndex].classList.add('active');
+}
+
+// Show the first member initially
+teamMembers[currentIndex].classList.add('active');
+
+// Slide to the next member every 4 seconds
+setInterval(showNextMember, 4000);
+
+    </script>
+
+    <!-- end of home -->
+    <!-- this is the start of about -->
+ <section id="about">
+
+    <div class="about-container">
+        <h1>About Us</h1>
+
+        <!-- Company Image -->
+        <div class="image-container">
+            <img src="images/home1.jpg" width="80%" height="90%" alt="Company Image">
+        </div>
+
+        <!-- Company Description -->
+        <div class="company-description">
+            <h2>Company Overview</h2>
+            <p>
+                Our company is a leader in delivering innovative solutions across multiple industries. 
+                With a passion for excellence, we have consistently provided top-quality services and products to our customers. 
+                We are dedicated to fostering growth and development by combining cutting-edge technology with a customer-centric approach.
+            </p>
+        </div>
+
+        <!-- Vision -->
+        <div class="company-vision">
+            <h2>Our Vision</h2>
+            <p>
+                To become a globally recognized company that delivers world-class solutions, drives innovation, and positively impacts society. 
+                We aim to be a trusted partner in transforming industries and creating a sustainable future.
+            </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="company-mission">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to empower businesses and communities by offering unparalleled services and solutions. 
+                We are committed to creating value through continuous innovation, sustainability, and an unwavering commitment to customer satisfaction.
+            </p>
+        </div>
+    </div>
+</section>
+    <!-- this is end of about -->
+       <div class="team-container">
+        <h1>Meet Our Team</h1>
+        <div class="slider">
+            <div class="team-member">
+                <img src="member1.jpg" alt="Member 1" class="profile-pic">
+                <h2>Kelvin Tolomet</h2>
+                <p>Role: Project manager</p>
+                <p>Description: John oversees the company's operations and sets the vision for growth.</p>
+            </div>
+            <div class="team-member">
+                <img src="member2.jpg" alt="Member 2" class="profile-pic">
+                <h2>Martin</h2>
+                <p>Role: CTO</p>
+                <p>Description: Martin leads the technology strategy and innovation for the company.</p>
+            </div>
+            <div class="team-member">
+                <img src="member3.jpg" alt="Member 3" class="profile-pic">
+                <h2>Mercy</h2>
+                <p>Role: CFO</p>
+                <p>Description: Mike manages financial planning and risk management.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentIndex = 0;
+const teamMembers = document.querySelectorAll('.team-member');
+
+function showNextMember() {
+    // Hide the current member
+    teamMembers[currentIndex].classList.remove('active');
+    
+    // Move to the next member
+    currentIndex = (currentIndex + 1) % teamMembers.length;
+    
+    // Show the next member
+    teamMembers[currentIndex].classList.add('active');
+}
+
+// Show the first member initially
+teamMembers[currentIndex].classList.add('active');
+
+// Slide to the next member every 3 seconds
+setInterval(showNextMember, 3000);
+
+    </script>
+    <!-- start of partenership -->
+    <div class="collaboration-container" id="collaboration">
+        <h1>Our Collaborations</h1>
+
+        <!-- Collaboration 1: Reputable Organization -->
+        <div class="collaborator">
+            <div class="image-container">
+                <img src="images/p4.png" alt="Reputable Organization">
+            </div>
+            <div class="collaborator-description">
+                <h2>Reputable Organization</h2>
+                <p><strong>Collaboration Overview:</strong> Our company partnered with this organization to drive sustainability and social impact projects globally.</p>
+                <p><strong>Details:</strong> Together, we implemented clean energy solutions, improved access to education in rural areas, and fostered eco-friendly business practices.</p>
+            </div>
+        </div>
+
+        <!-- Collaboration 2: Foundation -->
+        <div class="collaborator">
+            <div class="image-container">
+                <img src="images/p3.png" alt="Foundation">
+            </div>
+            <div class="collaborator-description">
+                <h2>Global Foundation</h2>
+                <p><strong>Collaboration Overview:</strong> We worked with the Global Foundation on philanthropic initiatives to support underprivileged communities.</p>
+                <p><strong>Details:</strong> Our joint efforts provided scholarships, healthcare access, and built sustainable infrastructure in developing regions.</p>
+            </div>
+        </div>
+
+        <!-- Collaboration 3: Government Body -->
+        <div class="collaborator">
+            <div class="image-container">
+                <img src="images/p2.jpg" alt="Government Body">
+            </div>
+            <div class="collaborator-description">
+                <h2>Government Body</h2>
+                <p><strong>Collaboration Overview:</strong> Our company partnered with the government to promote technological advancement and smart city solutions.</p>
+                <p><strong>Details:</strong> This collaboration focused on enhancing public services, transportation, and implementing AI-powered systems to improve efficiency.</p>
+            </div>
+        </div>
+
+        <!-- Collaboration 4: Private Company -->
+        <div class="collaborator">
+            <div class="image-container">
+                <img src="images/p1.png" alt="Private Company">
+            </div>
+            <div class="collaborator-description">
+                <h2>Leading Private Company</h2>
+                <p><strong>Collaboration Overview:</strong> We collaborated with this private company to co-develop cutting-edge tech products and services.</p>
+                <p><strong>Details:</strong> Together, we launched innovative solutions that cater to a global audience, improving customer experiences and increasing business efficiency.</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- end of partenership -->
+    <!-- start of of products section -->
+        <div class="product-container" id="products">
+        <div class="product">
+            <div class="image-container">
+                <img src="images/LactoMax.png" alt="Product 1">
+            </div>
+            <div class="description">
+                <h2>LactoMax app</h2>
+                <p>As LactoMax members we released our first company application which is very user frindly.</p>
+            </div>
+        </div>
+
+      <div class="product">
+            <div class="image-container">
+                <img src="images/aniiiii.jpg" alt="Product 2">
+            </div>
+            <div class="description">
+                <h2>Packed Milk</h2>
+                <p>We have managed to come up with packed milk and other products.</p>
+            </div>
+        </div>
+
+        <!--   <div class="product">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/300x200" alt="Product 3">
+            </div>
+            <div class="description">
+                <h2>Product 3</h2>
+                <p>This is the description of product 3. A must-have for anyone looking for quality.</p>
+            </div>
+        </div> -->
+
+        <<!-- div class="product">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/300x200" alt="Product 4">
+            </div>
+            <div class="description">
+                <h2>Product 4</h2>
+                <p>This is the description of product 4. It has all the features you need and more.</p>
+            </div>
+        </div> -->
+    </div>
+    <!-- end of products -->
+    <!-- start of services -->
+        <div class="services-container" id="services">
+        <h1>Our Services</h1>
+
+        <!-- Service 1 -->
+      <!--   <div class="service">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/350x200" alt="Service 1">
+            </div>
+            <div class="service-description">
+                <h2>Training</h2>
+                <p><strong>How it works:</strong> Our company provides farmers and workers with knowledge about modern dairy management techniques,feeding procedures and overall productivity.</p>
+                                <p><strong>Benefits:</strong>Offers farmers with overall dairy knowledege through training programs. </p>
+            </div>
+        </div> -->
+
+        <!-- Service 2 -->
+        <div class="">
+            <div class="image-container">
+                <img src="images/aniiii.jpg" alt="Service 2">
+            </div>
+            <div class="service-description">
+                <h2>Proper Nutrition</h2>
+                <p><strong>How it works:</strong> Our company offers cost effective farm feeds( supernappier,lucerne,caliandra,desmodium)</p>
+
+                <p><strong>Benefits:</strong> The proposed feeds are rich in proteins leading to increased milk production.</p>
+            </div>
+        </div>
+         <div class="">
+            <div class="image-container">
+                <img src="images/aniii.jpg" alt="Service 2">
+            </div>
+            <div class="service-description">
+                <h2>Genetic Breading</h2>
+                <p><strong>How it works:</strong> Our company offers selective breeding  to enhance desirable traits like higher milk yield,disease resistance and overall cow perfomance.<p>
+
+              
+                <p><strong>Benefits:</strong>higher milk yield,disease resistance and overall cow perfomance.  <p>
+            </div>
+        </div>
+         <div class="service">
+            <div class="image-container">
+                <img src="images/anii.jpg" alt="Service 1">
+            </div>
+            <div class="service-description">
+                <h2>Animal sheltering </h2>
+                <p><strong>How it works:</strong> Provides cows with a conducive environment that supports milk increase. </p>
+                                <p><strong>Benefits:</strong>. </p>
+            </div>Conducive environment helps in reducing stress and diseases,which directly contributes to increased milk production.
+        </div>
+         <div class="service">
+            <div class="image-container">
+                <img src="images/ani.jpg" alt="Service 1">
+            </div>
+            <div class="service-description">
+                <h2>Animal Health </h2>
+                <p><strong>How it works:</strong> Our company acts as a link between farmers and veterans.</p>
+                                <p><strong>Benefits:</strong>potentially for milk increase  </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- end of services -->
+    <!-- contact section -->
+                <section id="contact-us">
+                 <div class="contact-section" >
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out!</p>
+        
+        <div class="contact-form">
+            <form action="#">
+                <input type="text" class="form-input" placeholder="Your Name" required>
+                <input type="email" class="form-input" placeholder="Your Email" required>
+                <input type="text" class="form-input" placeholder="Subject" required>
+                <textarea placeholder="Your Message" class="form-textarea" required></textarea>
+                <button type="submit" class="form-btn">Send Message</button>
+            </form>
+        </div> 
+        </section>
+
+        <!-- end of contact section -->
+        <section class="footerr">
+         <!-- Footer -->
+    
+
+         <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Company Info Section -->
+            <div class="footer-section company-info">
+                <h3>LactoMax</h3>
+                <p>
+                    We are a leading company committed to delivering the best services to our customers.
+                    Our focus is on quality, innovation, and sustainability.
+                </p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#product">Products</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong> Kibabii University</p>
+                <p><strong>Email:</strong>lactomax9@gmail.com</p>
+                <p><strong>Phone:</strong> +254114967149
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://via.placeholder.com/30x30" alt="Facebook"></a>
+                    <a href="#"><img src="https://via.placeholder.com/30x30" alt="Twitter"></a>
+                    <a href="#"><img src="https://via.placeholder.com/30x30" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://via.placeholder.com/30x30" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 LactoMax All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</section>
+
+</body>
+</html>
